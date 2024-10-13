@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cadastrase.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Cadastrar-se</title>
+</head>
+
+<body>
+    
+
+    <main id="conteiner">
+        
+
+        <form id="login_form" method="post" action="cadastrar.jsp">
+            <div id="form_header">
+
+           
+            <h1>Cadastre-se</h1>
+            <i id="mode_icon" class="fa-solid fa-ghost"></i>
+        </div>
+
+
+            </div>
+            <div class="inputs">
+
+                <div class="input-box">
+                    <label for="matricula">
+                        matricula
+                        <div class="input-field">
+                            <i class="fa-solid fa-user"></i>
+                            <input id="matricula" type="text" name="matricula" maxlength="15">
+                        </div>
+                    </label>
+                </div>
+
+                <div class="input-box">
+                    <label for=" nome">
+                        nome
+                        <div class="input-field">
+                            <i class="fa-solid fa-key"></i>
+                            <input id="nome" type="text" name="nome" maxlength="50">
+                        </div>
+                    </label>
+                </div>
+
+                <div class="input-box">
+                    <label for="salario">
+                        salario 
+                        <div class="input-field">
+                            <i class="fa-solid fa-ghost"></i>
+                            <input id="salario" type="text" name="salario" maxlength="70">
+                        </div>
+                    </label>
+                </div>
+
+            </div>
+
+            <p>
+                <input id="salvar_button" type="submit" value="Salvar">
+            </p>
+        </form>
+
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+body {
+    background-image: url(vaporwave-light-japan-street-1uaxbsqmscz5hr14.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh; 
+    background-position: center;
+    max-width: 1200px; 
+    margin: 0 auto; /* Centraliza o conteúdo horizontalmente */
+   
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+    
+   
+}
+
+.logo{
+    font-size: 2em;
+    color: #fff;
+    user-select: none;
+}
+
+#nav_list {
+    list-style-type: none; /* Remove os marcadores da lista */
+    padding: 0;
+    display: flex; /* Adicionado: permite que os itens fiquem lado a lado */
+}
+
+.nav-item a {
+    text-decoration: none; /* Remove o sublinhado */
+    color: white; /* Cor dos links */
+    padding: 10px; 
+    transition: color 0.3s; 
+}
+
+.nav-item a:hover {
+    color: #61dafb; 
+}
+
+#nav_logo {
+    height: 100px;
+    width: auto;
+    margin-right: 60px;
+}
+
+#welcome_text {
+    font-size: 2em;
+    color: white;
+    align-self: center;
+    margin-right: 10px; 
+}
+#user-name {
+    font-size: 2em;
+    color: #fff;
+    user-select: none;
+    margin-left: 20px;
+}
+.navegation {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 15px; 
+    margin: 40px;
+  
+}
+.navegation a{
+    position: relative;
+    font-size: 1.1em;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+.navegation a::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    left: 0;
+    bottom: -6px;
+    transform: scaleX(0);
+    transition: transform .5s;
+   transform-origin: right;
+}
+.navegation a:hover::after{
+    transform: scaleX(1);
+    transform-origin: left;
+
+
+}
