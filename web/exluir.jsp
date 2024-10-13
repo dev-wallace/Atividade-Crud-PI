@@ -15,26 +15,27 @@
 
             try {
                 // Receber o ID do produto a ser excluído
-                int id = Integer.parseInt(request.getParameter("id"));
+                  String id = request.getParameter("matricula");
+                
 
                 /* Conectar com o banco de dados */
                 Class.forName("com.mysql.cj.jdbc.Driver"); // Aponta para a biblioteca JDBC
-                conecta = DriverManager.getConnection("jdbc:mysql://localhost:3306/empresa", "root", "root");
+                conecta = DriverManager.getConnection("jdbc:mysql://localhost:3306/atividade_pi", "root", "root");
 
                 /* Excluir produto do banco de dados */
-                st = conecta.prepareStatement("DELETE FROM produtos WHERE ID = ?");
-                st.setInt(1, id); // Define o valor do parâmetro ID
+                st = conecta.prepareStatement("DELETE FROM funcionario WHERE matricula = ?");
+                st.setString(1, id); // Define o valor do parâmetro ID
 
                 int status = st.executeUpdate(); // Executa o DELETE na tabela do DB
 
                 if (status == 1) {
-                    out.print("Produto excluído com sucesso.");
+                    out.print("matricula excluído com sucesso.");
                 } else {
-                    out.print("Produto não encontrado.");
+                    out.print("matricula não encontrado.");
                 }
 
             } catch (Exception e) {
-                out.print("Erro ao excluir o produtos " + e.getMessage());
+                out.print("Erro ao excluir o matricula " + e.getMessage());
             } finally {
                 // Fechar recursos para evitar vazamento de memória
                 if (st != null) try { st.close(); } catch (Exception e) { e.printStackTrace(); }

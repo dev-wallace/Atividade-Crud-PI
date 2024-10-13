@@ -22,23 +22,21 @@
             try {
                 // Aponta para a biblioteca JDBC
                 Class.forName("com.mysql.cj.jdbc.Driver");
-                conecta = DriverManager.getConnection("jdbc:mysql://localhost:3306/empresa", "root", "root");
+                conecta = DriverManager.getConnection("jdbc:mysql://localhost:3306/atividade_pi", "root", "root");
 
                 // Verificar se o produto com o id informado está na tabela do banco de dados 
-                st = conecta.prepareStatement("SELECT * FROM produtos");
+                st = conecta.prepareStatement("SELECT * FROM funcionario");
 
                 // Esse comando executa o comando SELECT na tabela do BD
                 resultado = st.executeQuery(); 
 
                 out.print("<table border='1'>");
-                out.print("<tr><th>ID</th><th>Nome</th><th>Marca</th><th>Preço</th><th>Data de Fabricação</th></tr>");
+                out.print("<tr><th>matricula</th><th>nome</th><th>salario</th></tr>");
 
                 while(resultado.next()){
-                    out.print("<tr><td>" + resultado.getString("id") + "</td>" +
+                    out.print("<tr><td>" + resultado.getString("matricula") + "</td>" +
                               "<td>" + resultado.getString("nome") + "</td>" +
-                              "<td>" + resultado.getString("marca") + "</td>" +
-                              "<td>" + resultado.getString("preco") + "</td>" +
-                              "<td>" + resultado.getString("data_fab") + "</td></tr>");
+                              "<td>" + resultado.getString("salario") + "</td>");
                 }
                 out.print("</table>");
 
